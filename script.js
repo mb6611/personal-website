@@ -1,9 +1,48 @@
-// Animate loading  for initial page
-document.addEventListener("DOMContentLoaded", function() {
-    addSlideIn("image-container");
-    addSlideIn("main-text-container");
-    addSlideIn("navbar");
-});
+// buttons
+const homeButton = document.getElementById("home-button");
+const aboutMeButton = document.getElementById("about-me-button");
+const startupsButton = document.getElementById("startups-button");
+const sidebarExitButton = document.getElementById("exit-container");
+
+// pages
+const mainPage = document.getElementById("main-page");
+const aboutMePage = document.getElementById("about-me");
+const startupsPage = document.getElementById("startups");
+const pages = [mainPage, aboutMePage, startupsPage];
+
+// hamburger menus
+const mainHamburgerMenu = document.getElementById("home-hamburger-menu");
+const aboutMeHamburgerMenu = document.getElementById("about-me-hamburger-menu");
+const startupsHamburgerMenu = document.getElementById("startups-hamburger-menu");
+
+// sidebar
+const sidebarMenu = document.getElementById("sidebar-menu")
+
+function slideOutPage(page) {
+    page.style.transform = "translateX(0%)";
+}
+
+function slideInPage(page) {
+    page.style.transform = "translateX(-100%)";
+}
+
+function slideOutPagesExcept(page) {
+
+    const indexOfPage = pages.indexOf(page);
+
+    // slide out all pages that are not the target page
+    for (let page = 0; page < pages.length; page++) {
+        if (page !== indexOfPage) {
+            slideOutPage(pages[page]);
+        }
+    }
+
+    // slide in the target page
+    slideInPage(pages[indexOfPage]);
+
+    // slide out the sidebar
+    slideOutPage(sidebarMenu);
+}
 
 // Implements .slide-in CSS class
 function addSlideIn(HTMLId) {
@@ -12,35 +51,43 @@ function addSlideIn(HTMLId) {
     element.classList.add("slide-in");
 }
 
-// Animate navbar interactions
-const hamburgerMenu = document.getElementById("home-hamburger-menu");
-const sidebarMenu = document.getElementById("sidebar-menu")
-hamburgerMenu.addEventListener('click', () => {
-    sidebarMenu.style.transform = "translateX(-100%)";
+
+// Animate initial loading for home page
+
+window.addEventListener("load", () => {
+    slideInPage(mainPage);
+    addSlideIn("image-container");
+    addSlideIn("main-text-container");
+    addSlideIn("navbar");
 });
 
-const sidebarExitContainer = document.getElementById("exit-container");
-sidebarExitContainer.addEventListener('click', () => {
-    sidebarMenu.style.transform = "translateX(0%)";
+
+// Button event listeners
+homeButton.addEventListener('click', () => {
+    slideOutPagesExcept(mainPage);
+});
+
+aboutMeButton.addEventListener('click', () => {
+    slideOutPagesExcept(aboutMePage);
+});
+
+startupsButton.addEventListener('click', () => {
+    slideOutPagesExcept(startupsPage);
+});
+
+sidebarExitButton.addEventListener('click', () => {
+    slideOutPage(sidebarMenu);
 })
 
-
-// Animate sidebar selections
-
-const homeButton = document.getElementById("home-button");
-homeButton.addEventListener('click', () => {
-    sidebarMenu.style.transform = "translateX(0%)";
-    aboutMePage.style.transform = "translateX(100%)";
+// Hamburger menu buttons
+mainHamburgerMenu.addEventListener('click', () => {
+    slideInPage(sidebarMenu);
 });
 
-const aboutMeButton = document.getElementById("about-me-button");
-const aboutMePage = document.getElementById("about-me");
-aboutMeButton.addEventListener('click', () => {
-    aboutMePage.style.transform = "translateX(0%)";
-    sidebarMenu.style.transform = "translateX(0%)";
-});
-
-const aboutMeHamburgerMenu = document.getElementById("about-me-hamburger-menu");
 aboutMeHamburgerMenu.addEventListener('click', () => {
-    sidebarMenu.style.transform = "translateX(-100%)";
+    slideInPage(sidebarMenu);
+});
+
+startupsHamburgerMenu.addEventListener('click', () => {
+    slideInPage(sidebarMenu);
 });
