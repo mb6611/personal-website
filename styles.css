@@ -72,7 +72,7 @@ body {
     position: static;
     opacity: 0;
     transform: translateY(-100%);
-    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .navbar.slide-in {
