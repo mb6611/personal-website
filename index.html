@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="main-page-styles.css"/>
+    <link rel="stylesheet" href="about-me-styles.css"/>
+    <link rel="stylesheet" href="sidebar-styles.css"/>
+    <link rel="stylesheet" href="startups-styles.css"/>
 </head>
 <body>
 
-    <div class="main_page">
+    <div class="main-page" id="main-page">
         <div class="navbar">
             <div class="title">Matthew Banaag</div>
 
@@ -28,7 +31,7 @@
                 <div style="display: inline-flex; width: 50%; height: 100%; padding: 10px; justify-content: center; align-items: center;">
                     <img src="Matthew Headshot large.jpg" class="profile-image">
                     <div class="back-profile-picture" style="display: flex; justify-content: center; align-items: center;">
-                        <div class="white-h1" style="text-align: center; background: #3C3B6E;">why won't this div just be the right size 😭</div>
+                        <div class="white-h1" style="text-align: center; background: #3C3B6E;">text</div>
                     </div>
                 </div>
 
@@ -92,7 +95,7 @@
 
     </div>
 
-    <div class="about-me" id="about-me" style="z-index: 0; justify-content: center;">
+    <div class="about-me" id="about-me">
 
         <div id="about-me-navbar" style="width: 100%; height: 80px; background-color: #3C3B6E; display: flex;justify-content: center; align-items: center; position: static; opacity: 1;">
             <div class="title">About Me</div>
@@ -359,6 +362,157 @@
 
     </div>
 
+    <div class="startups" id="startups">
+
+        <div id="startups-navbar" style="width: 100%; height: 80px; background-color: #3C3B6E; display: flex;justify-content: center; align-items: center; position: static; top: 0; opacity: 1;">
+            <div class="title">Startups</div>
+
+            <div class="hamburger_menu" id="startups-hamburger-menu">
+
+                <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 7px; display: inline-flex">
+                    <div class="hamburger_bar"></div>
+                    <div class="hamburger_bar"></div>
+                    <div class="hamburger_bar"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="startups-container">
+
+            <div class="startups-logo-container">
+
+                <img src="Asculta Logo.png" class="startups-logo"/>
+
+                <div class="white-h1" style="text-shadow: 4px 8px 4px #E3406D; text-align: center; animation: pulse 1.5s infinite; font-size: 42px;">Asculta Technologies</div>
+
+            </div>
+
+            <div class="startups-text-box-container">
+
+                <div class="startups-text-box">
+
+                    <div class="startups-text-box-header">
+                        <div class="pink-h1" style="font-size: 24px;">Description</div>
+                    </div>
+
+                    <div class="resume-text-box-description-container" style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="white-text-regular" style="text-align: center; font-size: 15px;">
+                            <span>Asculta Technologies produces </span>
+                            <span class="orange-text-regular" style="font-size: 15px;">AI-powered ultrasonic plasma acoustic emissions sensors,</span>
+                            <span>
+                            to detect structural damage in infrastructure before material failure.
+                            With our patented technology and software, our sensors characterize
+                            structural damage for </span>
+                            <span class="orange-text-regular" style="font-size: 15px;">high-temperature and
+                                high-radiation environments,</span>
+                            <span> extending the lifetime of nuclear fission and fusion reactors, chemical refineries,
+                                and other</span>
+                            <span class="orange-text-regular" style="font-size: 15px;">infrastructure in extreme environments.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="startups-text-box">
+
+                    <div class="startups-text-box-header">
+                        <div class="pink-h1" style="font-size: 24px;">Recognition</div>
+                    </div>
+
+                    <div class="resume-text-box-description-container" style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="white-text-regular" style="text-align: left; font-size: 15px;">
+
+                            <ul>
+
+                                <li class="orange-text-regular" style="font-size: 15px;">Y Combinator S23 Interviewee</li>
+                                <li>Finalist, Carnegie Mellon University Venture Challenge (annual national pitch
+                                    competition held at CMU)</li>
+                                <li>Finalist, Princeton Pitch Competition (annual flagship pitch competition held at
+                                    Princeton University</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+            </div>
+
+
+        </div>
+
+        </div>
+
+        <div class="startups-container">
+
+            <div class="startups-logo-container">
+
+                <img src="Asculta Logo.png" class="startups-logo"/>
+
+                <div class="white-h1" style="text-shadow: 4px 8px 4px #E3406D; text-align: center; animation: pulse 1.5s infinite; font-size: 42px;">Asculta Technologies</div>
+
+            </div>
+
+            <div class="startups-text-box-container">
+
+                <div class="startups-text-box">
+
+                    <div class="startups-text-box-header">
+                        <div class="pink-h1" style="font-size: 24px;">Description</div>
+                    </div>
+
+                    <div class="resume-text-box-description-container" style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="white-text-regular" style="text-align: center; font-size: 15px;">
+                            <span>Asculta Technologies produces </span>
+                            <span class="orange-text-regular" style="font-size: 15px;">AI-powered ultrasonic plasma acoustic emissions sensors,</span>
+                            <span>
+                            to detect structural damage in infrastructure before material failure.
+                            With our patented technology and software, our sensors characterize
+                            structural damage for </span>
+                            <span class="orange-text-regular" style="font-size: 15px;">high-temperature and
+                                high-radiation environments,</span>
+                            <span> extending the lifetime of nuclear fission and fusion reactors, chemical refineries,
+                                and other</span>
+                            <span class="orange-text-regular" style="font-size: 15px;">infrastructure in extreme environments.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="startups-text-box">
+
+                    <div class="startups-text-box-header">
+                        <div class="pink-h1" style="font-size: 24px;">Recognition</div>
+                    </div>
+
+                    <div class="resume-text-box-description-container" style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="white-text-regular" style="text-align: left; font-size: 15px;">
+
+                            <ul>
+
+                                <li class="orange-text-regular" style="font-size: 15px;">Y Combinator S23 Interviewee</li>
+                                <li>Finalist, Carnegie Mellon University Venture Challenge (annual national pitch
+                                    competition held at CMU)</li>
+                                <li>Finalist, Princeton Pitch Competition (annual flagship pitch competition held at
+                                    Princeton University</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
 
     <script src="script.js"></script>
 

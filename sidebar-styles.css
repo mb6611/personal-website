@@ -1,0 +1,61 @@
+/* || General Styles */
+
+.sidebar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX(0%);
+    transition: transform 1s ease-in-out;
+}
+
+.sidebar-background {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+    background: #3C3B6E;
+
+    transition: transform 1s ease-in-out;
+}
+
+.exit-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 64px;
+    height: 57px;
+
+    transition: transform 0.3s ease;
+}
+
+.exit-container:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+/* || Typography */
+
+.sidebar-text-container .white-h1 {
+    text-shadow: 4px 8px 4px #2B0E26;
+    padding: 1%;
+    transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sidebar-text-container .white-h1:hover {
+    text-shadow: 4px 8px 8px #E3406D;
+    cursor: pointer;
+    /*transform: scale(1.1);*/
+}

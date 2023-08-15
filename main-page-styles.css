@@ -1,0 +1,260 @@
+/* || General Styles */
+body {
+    background-color: #2B0E26;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-page {
+    position: relative;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX(0%);
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+
+    border: 5px black solid;
+    border-radius: 100px;
+
+    box-shadow: 4px 8px 4px #3C3B6E;
+
+    transition: transform 0.3s ease-in-out;
+    animation: box-pulse 1.5s infinite;
+}
+
+
+.profile-image:hover {
+    transform: rotateY(0);
+    cursor: pointer;
+}
+
+.profile-image:active {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.back-profile-picture {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+
+    border-radius: 100px;
+
+    transform: rotateY(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .back-profile-picture {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.image-container:active .back-profile-picture {
+    transform: rotateY(0);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: static;
+    width: 100%;
+    height: 80px;
+
+    opacity: 0;
+    background-color: #3C3B6E;
+
+    transform: translateY(-100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.navbar.slide-in {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.image-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+
+    opacity: 0;
+
+    transform: translateX(-100%);
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    animation: pulse 1s infinite;
+}
+
+.image-container.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.main-text-container {
+    display: inline-flex;
+    align-items: center;
+
+    width: 50%;
+
+    opacity: 0;
+
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.main-text-container.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hamburger_menu {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 64px;
+    height: 57px;
+
+    transition: transform 0.3s ease;
+}
+
+.hamburger_menu:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+.hamburger_bar {
+    width: 48px;
+    height: 8px;
+
+    border-radius: 5px;
+
+    background: #D9D9D9;
+
+    box-shadow: 0 0 12px #2B0E26;
+}
+
+
+
+/* || Typography */
+.title {
+    flex: 0.9;
+
+    text-align: center;
+    word-wrap: break-word;
+
+    top: 50%;
+    left: 50%;
+
+    color: #D9D9D9;
+
+    font-size: 32px;
+    font-family: Poppins;
+    font-weight: 700;
+
+    text-shadow: 4px 8px 4px #2B0E26;
+}
+
+.blue-h1 {
+    color: #35D1E5;
+    font-size: 48px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 4px 8px 4px #3C3B6E;
+    animation: pulse 1.5s infinite;
+}
+
+.orange-h1 {
+    color: #FABE3E;
+    font-size: 48px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 4px 8px 4px #3C3B6E;
+    animation: pulse 1.5s infinite;
+}
+
+.pink-h1 {
+    color: #E3406D;
+    font-size: 48px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 4px 8px 4px #3C3B6E;
+}
+
+.white-h1 {
+    color: #D9D9D9;
+    font-size: 48px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-shadow: 4px 8px 4px #3C3B6E;
+}
+
+.pink-h2 {
+    color: #E3406D;
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.white-h2  {
+    color: white;
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+
+.white-text-regular {
+    color: white;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.orange-text-regular {
+    color: #FABE3E;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+
+
+/* || Animations */
+@keyframes box-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 #3C3B6E;
+    }
+
+    50% {
+        box-shadow: 0 0 30px #3C3B6E;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 4px 8px 4px #3C3B6E;
+    }
+
+    50% {
+        text-shadow: 4px 8px 8px #E3406D;
+    }
+}
