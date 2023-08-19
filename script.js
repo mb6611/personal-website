@@ -15,8 +15,13 @@ const mainHamburgerMenu = document.getElementById("home-hamburger-menu");
 const aboutMeHamburgerMenu = document.getElementById("about-me-hamburger-menu");
 const startupsHamburgerMenu = document.getElementById("startups-hamburger-menu");
 
+// hover elements
+const profileImageBox = document.getElementById("image-card");
+const profileImage = document.getElementById("main-page-profile-image");
+
 // sidebar
 const sidebarMenu = document.getElementById("sidebar-menu")
+
 
 function slideOutPage(page) {
     page.style.transform = "translateX(0%)";
@@ -53,7 +58,6 @@ function addSlideIn(HTMLId) {
 
 
 // Animate initial loading for home page
-
 window.addEventListener("load", () => {
     slideInPage(mainPage);
     addSlideIn("image-container");
@@ -79,6 +83,7 @@ sidebarExitButton.addEventListener('click', () => {
     slideOutPage(sidebarMenu);
 })
 
+
 // Hamburger menu buttons
 mainHamburgerMenu.addEventListener('click', () => {
     slideInPage(sidebarMenu);
@@ -91,3 +96,28 @@ aboutMeHamburgerMenu.addEventListener('click', () => {
 startupsHamburgerMenu.addEventListener('click', () => {
     slideInPage(sidebarMenu);
 });
+
+// Main page
+/*
+profileImageBox.addEventListener('mouseover', () => {
+    profileImage.style.backfaceVisibility = "hidden";
+    profileImage.style.transform = "rotateY(180deg)";
+});
+
+profileImageBox.addEventListener('mouseout', () => {
+    profileImage.style.transform = "rotateY(0deg)";
+});*/
+
+document.getElementById('image-front-face').addEventListener('click', function() {
+    document.getElementById("image-card").style.transform = "rotateY(180deg)";
+});
+
+document.getElementById('image-back-face').addEventListener('click', ()=> {
+    document.getElementById("image-card").style.transform = "rotateY(0deg)";
+});
+
+/*
+const imageBackText = document.getElementById('image-back-face-text');
+imageBackText.style.width = profileImage.style.width;
+imageBackText.style.height = profileImage.style.height;
+*/
